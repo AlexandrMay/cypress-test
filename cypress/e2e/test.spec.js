@@ -1,19 +1,22 @@
 /// <reference types="cypress" />
 import { NavMenuComponent } from "../pages/components/NavigationMenuComponent";
+import { ApiHelper } from "../support/apiHelper";
+import moment from "moment";
+import { getTokenFromLs } from "../support/token.js";
 
 describe("Second suite", () => {
+
   beforeEach(() => {
-    cy.visit("/");
+    cy.loginByAPI();
   });
 
   it("First", () => {
-    const menu = new NavMenuComponent();
-    const forms = menu.openFormLayoutsPage();
-    // cy.clickToMenuByName("Forms");
-    // cy.clickToMenuByName("Form Layouts");
-    
-    forms.enterEmailValue("value");
-    forms.emailInput.should("have.value", "value");
-    forms.enterPasswordValueAndValidate("test");
+    cy.contains("Огляд").click();
+    ApiHelper.getCategories().then(categoies => {
+      console.log(categoies);
+    });
+    ApiHelper.getCategories2(getTokenFromLs()).then(categoies => {
+      console.log(categoies);
+    });
   });
 });
