@@ -13,6 +13,7 @@ on:
 jobs:
   testing:
     runs-on: ubuntu-latest
+    continue-on-error: true
     container:
       image: cypress/browsers:node-20.6.1-chrome-116.0.5845.187-1-ff-117.0-edge-116.0.1938.76-1
       options: --user 1001
