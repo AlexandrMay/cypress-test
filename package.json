@@ -32,7 +32,6 @@
     "cypress:run": "npm run prereport && npx cypress run --spec cypress/e2e/dateTest.spec.js,cypress/e2e/hw.spec.js --browser chrome",
     "generate:report": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json",
     "cypress:e2e": "start-test start http-get://localhost:4200/ cypress:run",
-    "cypress:ci": "npm run cypress:e2e; npm run generate:report",
     "delete:reports": "rimraf cypress/results/* || true",
     "delete:merged": "rimraf mochawesome.json || true",
     "delete:html": "rimraf mochawesome-report || true",

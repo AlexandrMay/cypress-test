@@ -27,7 +27,9 @@ jobs:
       - name: Project dependencies install
         run: npm i --force
       - name: Run tests
-        run: npm run cypress:ci
+        run: npm run cypress:e2e
+      - name: Generating report
+        run: npm run generate:report
       - name: Save test report
         uses: actions/upload-artifact@v3
         with:
