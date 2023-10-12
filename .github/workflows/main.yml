@@ -4,7 +4,7 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     container:
-      image: sitespeedio/webbrowsers:chrome-118.0-firefox-118.0-edge-117.0
+      image: cypress/browsers:node-20.6.1-chrome-116.0.5845.187-1-ff-117.0-edge-116.0.1938.76-1
     steps:
       - name: Get the code
         uses: actions/checkout@v4
