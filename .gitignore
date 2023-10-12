@@ -41,6 +41,7 @@ testem.log
 Thumbs.db
 
 # Reports ignores
+/cypress/downloads
 /cypress/screenshots
 /cypress/results
 /mochawesome-report
