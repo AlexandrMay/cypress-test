@@ -37,6 +37,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Test Report
+      - name: Set the job status
+        if: failure()
+        run: exit 1
 
 
 
