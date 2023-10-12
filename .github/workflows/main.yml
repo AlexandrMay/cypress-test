@@ -33,7 +33,10 @@ jobs:
         with:
           path: mochawesome-report
           name: Test Report
-
+      - name: Get test report
+        uses: actions/download-artifact@v3
+        with:
+          name: Test Report
 
 
 
