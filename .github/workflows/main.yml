@@ -28,18 +28,18 @@ jobs:
         run: npm i --force
       - name: Run tests
         run: npm run cypress:ci
+        if: failure()
       - name: Save test report
         uses: actions/upload-artifact@v3
         with:
           path: mochawesome-report
           name: Test Report
+        if: failure()
       - name: Get test report
         uses: actions/download-artifact@v3
         with:
           name: Test Report
-      - name: Set the job status
         if: failure()
-        run: exit 1
 
 
 
