@@ -8,7 +8,7 @@ describe("Datepicker test", () => {
   it("Validate today date value selection", () => {
     cy.visit("/");
     const menu = new NavMenuComponent();
-    menu.openMenuItemByValue("Formss");
+    menu.openMenuItemByValue("Forms");
     menu.openMenuItemByValue("Datepicker");
     const todayDate = moment().format("MMM D, YYYY");
     const datepicker = new DatePickerPage();
