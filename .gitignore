@@ -40,4 +40,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/cypress/screenshots/
+# Reports ignores
+/cypress/screenshots
+/cypress/results
+/mochawesome-report
+mochawesome.json

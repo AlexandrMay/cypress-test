@@ -1,6 +1,4 @@
 /// <reference types="cypress" />
-
-import { ApiHelper } from "./apiHelper";
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -53,15 +51,5 @@ Cypress.Commands.add(
     });
   }
 );
-
-Cypress.Commands.add("loginByAPI", () => {
-  ApiHelper.getToken(Cypress.env("login"), Cypress.env("password")).then((token) => {
-    cy.visit("http://5.189.186.217/history", {
-      onBeforeLoad(win) {
-        win.localStorage.setItem("auth-token", token);
-      }
-    });
-  });
-});
 
 

@@ -1,15 +1,19 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  retries: 1,
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/results',
+    overwrite: false,
+    html: false,
+    json: true,
+  },
   viewportHeight: 1080,
   viewportWidth: 1920,
   e2e: {
-    //baseUrl: "http://localhost:4200/",
     setupNodeEvents(on, config) {
-      const login = process.env.LOGIN
-      const password = process.env.PASSWORD
 
-      config.env = {login, password};
       // implement node event listeners here
       on("task", {
         logToConsole(message) {
@@ -24,6 +28,7 @@ export default defineConfig({
         return launchOptions;
       });
     },
+    baseUrl: "http://localhost:4200/",
     specPattern: "cypress/e2e/**/*.spec.{js,jsx,ts,tsx}",
     excludeSpecPattern: ["**/2-advanced-examples"],
   },
