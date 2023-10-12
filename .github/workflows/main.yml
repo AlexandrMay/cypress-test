@@ -18,5 +18,7 @@ jobs:
       - name: Project dependencies install
         run: npm i --force
       - name: Run tests
-        run: npm run cypress:e2e
+        run: |
+          npm run cypress:e2e
+          if [ $? -gt 0 ] then exit 1 else exit 0 fi
 
