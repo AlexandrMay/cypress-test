@@ -3,7 +3,8 @@ on: workflow_dispatch
 jobs:
   testing:
     runs-on: ubuntu-latest
-    container: sitespeedio/webbrowsers:chrome-118.0-firefox-118.0-edge-117.0
+    container:
+      image: sitespeedio/webbrowsers:chrome-118.0-firefox-118.0-edge-117.0
     steps:
       - name: Get the code
         uses: actions/checkout@v4
