@@ -36,11 +36,8 @@ jobs:
           path: mochawesome-report
           name: Test Report
         if: failure() || success()
-  report_downloading:
-    runs-on: ubuntu-latest
-    needs: testing
-    steps:
       - name: Get test report
         uses: actions/download-artifact@v3
         with:
           name: Test Report
+        if: failure() || success()
