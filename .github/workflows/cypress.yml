@@ -1,4 +1,4 @@
-name: Testing Workflow
+name: Testing Workflow with Cypress
 on: workflow_dispatch
 jobs:
   testing:
