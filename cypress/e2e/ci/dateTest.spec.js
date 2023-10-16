@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import { DatePickerPage } from "../pages/DatePickerPage";
-import { NavMenuComponent } from "../pages/components/NavigationMenuComponent";
+import { DatePickerPage } from "../../pages/DatePickerPage";
+import { NavMenuComponent } from "../../pages/components/NavigationMenuComponent";
 import moment from "moment";
 
 describe("Datepicker test", () => {
