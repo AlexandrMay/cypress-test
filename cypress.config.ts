@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  projectId: 'auraac',
   retries: 1,
   reporter: 'mochawesome',
   reporterOptions: {
