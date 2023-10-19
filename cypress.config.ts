@@ -40,7 +40,7 @@ export default defineConfig({
 
       return config;
     },
-    baseUrl: "http://localhost:4200/",
+    baseUrl: "http://localhost",
     specPattern: "cypress/e2e/**/*.spec.{js,jsx,ts,tsx}",
     excludeSpecPattern: ["**/2-advanced-examples", "**/__snapshots__/*", "**/__image_snapshots__/*"],
   },
