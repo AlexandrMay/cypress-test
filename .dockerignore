@@ -1,0 +1,6 @@
+.github
+.nyc_output
+.vscode
+cypress
+node_modules
+Dockerfile
